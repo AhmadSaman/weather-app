@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import React, { useEffect, useState, useCallback } from "react";
 import { Form } from "react-bootstrap";
 
-const SearchBar = ({ setData, setPending, pending, setError }) => {
+const SearchBar = ({ setData, setPending, setError }) => {
 	const [city, setCity] = useState("");
 	const [input, setInput] = useState("");
 	const fetchingData = useCallback(() => {

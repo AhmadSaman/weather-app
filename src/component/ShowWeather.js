@@ -8,11 +8,7 @@ const ShowWeather = ({ data, pending, error }) => {
 			{pending && !error && (
 				<p className="text-center m-auto p-2">{"Loading.."}</p>
 			)}
-			{error && (
-				<p className="text-center m-auto p-2">
-					{"There is no cities with this name "}
-				</p>
-			)}
+			{error && <p className="text-center m-auto p-2">{"Try another city"}</p>}
 			{data && !pending && !error && (
 				<Card
 					style={{ width: "18rem", borderRadius: "1rem" }}
