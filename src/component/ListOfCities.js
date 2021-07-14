@@ -1,6 +1,11 @@
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
-export const ListOfCities = ({ el }) => {
+export const ListOfCities = ({ el, list, setList }) => {
+	const handleDelete0 = () => {
+		const newList = list.filter((item) => item !== el.name.toLowerCase());
+		console.log(newList, list);
+		setList(newList);
+	};
 	return (
 		<div>
 			{el && (
@@ -21,6 +26,15 @@ export const ListOfCities = ({ el }) => {
 						className="w-25 m-auto"
 						src={`http://openweathermap.org/img/wn/${el.weather[0].icon}.png`}
 					/>
+					<div>
+						<Button
+							variant="primary"
+							className="w-50 m-auto"
+							onClick={handleDelete0}
+						>
+							{"Delete"}
+						</Button>
+					</div>
 				</Card>
 			)}
 		</div>

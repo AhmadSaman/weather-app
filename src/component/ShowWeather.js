@@ -49,6 +49,7 @@ const ShowWeather = ({
 		console.log(newList);
 		setList(newList);
 	};
+
 	return (
 		<div>
 			{" "}

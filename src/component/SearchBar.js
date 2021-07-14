@@ -21,13 +21,13 @@ const SearchBar = ({ setCity, input, setInput, setMain, main }) => {
 	};
 	return (
 		<div className="text-center">
+			<Button onClick={handleMain} variant="secondary" className="m-3">
+				Go to home page
+			</Button>
 			<Form
 				onSubmit={handleSubmit}
-				className="d-flex justify-content-center m-5"
+				className="d-flex justify-content-center mb-3"
 			>
-				<Button onClick={handleMain} variant="secondary" className="mr-1">
-					Go to home page
-				</Button>
 				<Form.Control
 					className="w-50 mr-1 city"
 					type="text"

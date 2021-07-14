@@ -16,10 +16,10 @@ function App() {
 	const [error, setError] = useState(false);
 	const [list, setList] = useState([
 		"erbil",
-		"duhok",
+		"dahuk",
 		"baghdad",
 		"najaf",
-		"basrah",
+		"basra",
 	]);
 	const [listData, setListData] = useState([]);
 
@@ -74,7 +74,7 @@ function App() {
 					{listData.map((el, i) => {
 						return (
 							<div className="m-2">
-								<ListOfCities el={el} key={i} />
+								<ListOfCities el={el} key={i} list={list} setList={setList} />
 							</div>
 						);
 					})}
