@@ -12,7 +12,7 @@ const SearchBar = ({ setData, setPending, setError }) => {
 			setError(false);
 
 			fetch(
-				`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1b6f712e213f6057d237c16473d9c9d2`
+				`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`
 			)
 				.then((res) => {
 					if (res.status === 200) {
